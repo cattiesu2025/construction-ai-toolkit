@@ -1,3 +1,4 @@
+import os
 import construction_mcp._pathsetup  # noqa: F401 — must be first import
 from mcp.server.fastmcp import FastMCP
 from construction_mcp import tools, resources, prompts
@@ -96,7 +97,8 @@ def risk_assessment_template(project_id: str) -> str:
 
 
 def main() -> None:
-    mcp.run()
+    port = int(os.getenv("PORT", 8000))
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
 
 
 if __name__ == "__main__":
