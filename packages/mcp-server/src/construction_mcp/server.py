@@ -3,7 +3,7 @@ import construction_mcp._pathsetup  # noqa: F401 — must be first import
 from mcp.server.fastmcp import FastMCP
 from construction_mcp import tools, resources, prompts
 
-mcp = FastMCP("construction-tools")
+mcp = FastMCP("construction-tools", host="0.0.0.0")
 
 
 # ============ TOOLS ============
@@ -98,7 +98,6 @@ def risk_assessment_template(project_id: str) -> str:
 
 def main() -> None:
     port = int(os.getenv("PORT", 8000))
-    mcp.settings.host = "0.0.0.0"
     mcp.settings.port = port
     mcp.run(transport="streamable-http")
 
