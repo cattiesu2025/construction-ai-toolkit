@@ -1,0 +1,56 @@
+task_id,project_id,task_name,task_type,planned_start,planned_end,actual_start,actual_end,actual_progress_pct,assigned_crew,location,is_critical_path,notes
+T001,PRJ-001,Site Preparation & Demolition,demolition,2024-01-15,2024-02-28,2024-01-15,2024-03-10,100,Alpha Crew,Sydney CBD,true,Completed 10 days late due to unexpected asbestos
+T002,PRJ-001,Foundation Excavation,excavation,2024-03-01,2024-04-15,2024-03-11,2024-04-30,100,Beta Crew,Sydney CBD,true,Delayed due to site prep overrun
+T003,PRJ-001,Concrete Piling,piling,2024-04-16,2024-06-30,2024-05-01,,72,Gamma Crew,Sydney CBD,true,
+T004,PRJ-001,Ground Floor Slab,concrete,2024-07-01,2024-08-15,,,0,Delta Crew,Sydney CBD,true,Not yet started
+T005,PRJ-001,Structural Steel Frame L1-L10,structural_steel,2024-08-16,2024-11-30,,,0,Alpha Crew,Sydney CBD,true,Depends on T004
+T006,PRJ-001,Facade Installation,facade,2024-12-01,2025-02-28,,,0,Beta Crew,Sydney CBD,false,
+T007,PRJ-001,MEP Rough-In,mep,2025-01-15,2025-04-30,,,0,Epsilon Crew,Sydney CBD,false,
+T008,PRJ-001,Interior Fit-Out,fitout,2025-03-01,2025-06-15,,,0,Zeta Crew,Sydney CBD,false,
+T009,PRJ-002,Demolition of West Wing,demolition,2024-03-01,2024-04-30,2024-03-05,2024-05-02,100,Alpha Crew,Parramatta,false,Slight overrun
+T010,PRJ-002,Structural Reinforcement,structural_steel,2024-05-01,2024-07-31,2024-05-03,,85,Beta Crew,Parramatta,true,
+T011,PRJ-002,New Retail Shell,concrete,2024-08-01,2024-11-30,,,0,Gamma Crew,Parramatta,true,
+T012,PRJ-002,Roof Installation,roofing,2024-10-01,2025-01-31,,,0,Delta Crew,Parramatta,false,
+T013,PRJ-002,Shopfront Fitout,fitout,2025-02-01,2025-10-31,,,0,Zeta Crew,Parramatta,false,
+T014,PRJ-003,Station Box Excavation,excavation,2023-11-01,2024-06-30,2023-11-05,2024-08-15,100,Underground Crew A,Footscray,true,Severe delay 45 days due to rock formation
+T015,PRJ-003,Tunnel Boring Segment,tunnelling,2024-07-01,2025-03-31,2024-08-16,,55,TBM Crew,Footscray,true,Behind schedule
+T016,PRJ-003,Station Concourse Structure,concrete,2025-04-01,2025-10-31,,,0,Structure Crew,Footscray,true,
+T017,PRJ-003,Platform Installation,fitout,2025-11-01,2026-01-31,,,0,Rail Crew,Footscray,true,
+T018,PRJ-003,Systems Integration & Testing,mep,2026-02-01,2026-03-31,,,0,Systems Crew,Footscray,true,
+T019,PRJ-004,Site Survey & Geotech,survey,2024-05-01,2024-05-31,2024-05-01,2024-05-28,100,Survey Team,Zetland,false,Completed slightly early
+T020,PRJ-004,Drainage & Civil Works,civil,2024-06-01,2024-08-31,2024-06-03,,60,Civil Crew,Zetland,true,
+T021,PRJ-004,Landscaping Stage 1,landscaping,2024-09-01,2024-11-30,,,0,Green Team,Zetland,false,
+T022,PRJ-004,Playground Equipment,fitout,2024-11-01,2025-01-31,,,0,Install Crew,Zetland,false,
+T023,PRJ-004,Lighting & Electrical,mep,2025-01-01,2025-03-31,,,0,Electrical Crew,Zetland,false,
+T024,PRJ-004,Final Landscaping,landscaping,2025-04-01,2025-06-30,,,0,Green Team,Zetland,false,
+T025,PRJ-004,Commissioning & Handover,commissioning,2025-07-01,2025-09-30,,,0,PM Team,Zetland,false,
+T026,PRJ-005,River Wall Assessment,survey,2024-02-15,2024-03-15,2024-02-15,2024-03-12,100,Survey Team,South Brisbane,true,
+T027,PRJ-005,Piling & Foundation,piling,2024-03-16,2024-06-30,2024-03-16,,78,Piling Crew,South Brisbane,true,On track
+T028,PRJ-005,Deck Structure,structural_steel,2024-07-01,2024-10-31,,,0,Steel Crew,South Brisbane,true,
+T029,PRJ-005,Surface & Finishes,fitout,2024-11-01,2025-03-31,,,0,Finish Crew,South Brisbane,false,
+T030,PRJ-005,Lighting & Amenities,mep,2025-02-01,2025-06-30,,,0,MEP Crew,South Brisbane,false,
+T031,PRJ-006,Design Development,design,2024-06-01,2024-08-31,2024-06-01,2024-09-20,100,Design Team,Perth CBD,false,Overran by 20 days
+T032,PRJ-006,Demolition Prep,demolition,2024-09-01,2024-10-31,2024-09-21,,40,Demo Crew,Perth CBD,true,Started late due to design overrun
+T033,PRJ-006,Steel Structure Extension,structural_steel,2024-11-01,2025-03-31,,,0,Steel Crew,Perth CBD,true,
+T034,PRJ-006,Roof & Facade,facade,2025-04-01,2025-08-31,,,0,Facade Crew,Perth CBD,false,
+T035,PRJ-006,Interior & AV Systems,fitout,2025-07-01,2025-12-31,,,0,Fitout Crew,Perth CBD,false,
+T036,PRJ-007,Piling & Basement,piling,2024-04-01,2024-09-30,2024-04-03,,92,Piling Crew,North Sydney,true,Slightly ahead
+T037,PRJ-007,Core Wall Construction,concrete,2024-10-01,2025-04-30,,,0,Core Crew,North Sydney,true,
+T038,PRJ-007,Floor Plate Construction L1-L30,concrete,2025-01-01,2025-12-31,,,0,Slab Crew,North Sydney,true,
+T039,PRJ-007,Facade Cladding,facade,2025-08-01,2026-04-30,,,0,Facade Crew,North Sydney,false,
+T040,PRJ-007,Fitout & Services,fitout,2026-01-01,2026-06-30,,,0,Fitout Crew,North Sydney,false,
+T041,PRJ-008,Route Survey & Approval,survey,2024-01-01,2024-04-30,2024-01-01,2024-04-25,100,Survey Team,Southport,false,
+T042,PRJ-008,Utility Relocation,civil,2024-05-01,2024-10-31,2024-05-01,,45,Civil Crew,Southport,true,Behind by 3 weeks
+T043,PRJ-008,Track Bed Construction,civil,2024-08-01,2025-06-30,,,0,Track Crew,Southport,true,
+T044,PRJ-008,Station Platform Structures,concrete,2025-01-01,2025-09-30,,,0,Concrete Crew,Southport,true,
+T045,PRJ-008,Rail & Tram Systems,mep,2025-07-01,2026-06-30,,,0,Systems Crew,Southport,true,
+T046,PRJ-009,Site Remediation,demolition,2024-07-01,2024-09-30,2024-07-03,,65,Demo Crew,Docklands,false,On track
+T047,PRJ-009,Residential Tower Foundation,piling,2024-10-01,2025-03-31,,,0,Piling Crew,Docklands,true,
+T048,PRJ-009,Commercial Podium Structure,concrete,2025-01-01,2025-09-30,,,0,Concrete Crew,Docklands,true,
+T049,PRJ-009,Tower Construction,structural_steel,2025-07-01,2026-09-30,,,0,Tower Crew,Docklands,true,
+T050,PRJ-009,Landscape & Public Realm,landscaping,2026-06-01,2026-12-31,,,0,Landscape Crew,Docklands,false,
+T051,PRJ-010,Heritage Assessment,survey,2024-08-01,2024-08-31,2024-08-01,2024-08-28,100,Heritage Consultants,Fremantle,false,
+T052,PRJ-010,Structural Stabilisation,structural_steel,2024-09-01,2024-11-30,2024-09-03,,30,Specialist Crew,Fremantle,true,Behind due to material supply
+T053,PRJ-010,Facade Restoration,facade,2024-12-01,2025-04-30,,,0,Restoration Crew,Fremantle,false,
+T054,PRJ-010,Interior Restoration,fitout,2025-03-01,2025-09-30,,,0,Heritage Fitout,Fremantle,false,
+T055,PRJ-010,Final Inspection & Handover,commissioning,2025-10-01,2025-11-30,,,0,PM Team,Fremantle,false,

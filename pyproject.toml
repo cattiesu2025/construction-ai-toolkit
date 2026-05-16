@@ -1,0 +1,13 @@
+[project]
+name = "construction-ai-toolkit"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+core-tools = { workspace = true }
+
+[dependency-groups]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "ruff>=0.4"]

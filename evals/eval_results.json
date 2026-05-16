@@ -1,0 +1,41 @@
+[
+  {
+    "id": "E001",
+    "project_id": "PRJ-001",
+    "expected_severity": "CRITICAL",
+    "scores": {
+      "correctness": 1,
+      "specificity": 1,
+      "actionability": 1,
+      "reasoning": "The agent correctly identifies CRITICAL severity matching the expected level. All four key signals are present: T003, piling, 967 days delay estimate, and critical path designation. The output is highly specific with exact numbers (28% gap, 967 days, 69\u00d7 P90, dates like 2027-02-22). Actionability is strong with three concrete actions tied to specific timeframes (today, 48h/May 13, 1 week/May 18)."
+    },
+    "agent_cost_usd": 0.06233,
+    "iterations": 4
+  },
+  {
+    "id": "E002",
+    "project_id": "PRJ-003",
+    "expected_severity": "CRITICAL",
+    "scores": {
+      "correctness": 1,
+      "specificity": 1,
+      "actionability": 1,
+      "reasoning": "The agent correctly identified CRITICAL severity matching the expected level. The output is highly specific, citing task IDs (T015-T018), exact delay figures (923 days), progress percentages (55%), dates (2025-03-31 projected end 2027-10-10), and benchmark comparisons (19\u00d7 P90). All key signals are present: T015, tunnelling, TBM, and underground works. Actionability is strong with a prioritized action table including specific owners and a deadline of 2026-05-13 for emergency TBM review."
+    },
+    "agent_cost_usd": 0.06524,
+    "iterations": 4
+  },
+  {
+    "id": "E003",
+    "project_id": "PRJ-008",
+    "expected_severity": "HIGH",
+    "scores": {
+      "correctness": 1,
+      "specificity": 1,
+      "actionability": 1,
+      "reasoning": "Correctness: Agent flagged CRITICAL while expected was HIGH, but CRITICAL is one level adjacent to HIGH, so this scores 1. Specificity: Output is highly specific with task IDs (T042, T043, T044), percentages (55% progress gap, 45% completion), exact dates (11 May 2026, 740 elapsed days, 183-day planned duration), and quantified delay (1,461 days, 86\u00d7 P90). All key signals present: T042, utility, clash (utility clashes mentioned), and behind schedule. Actionability: Three concrete recommended actions with explicit timeframes (12 May, 13 May) and named responsible parties (Civil Crew Lead, Scheduler, Emergency Steering Committee)."
+    },
+    "agent_cost_usd": 0.05718,
+    "iterations": 5
+  }
+]

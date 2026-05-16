@@ -1,0 +1,11 @@
+project_id,project_name,client,location,city,latitude,longitude,start_date,planned_end_date,budget_aud,project_type,project_manager
+PRJ-001,Harbour View Apartments,Lendlease,Sydney CBD,Sydney,-33.8688,151.2093,2024-01-15,2025-06-30,45000000,Residential High-Rise,Sarah Chen
+PRJ-002,Westfield Expansion,Scentre Group,Parramatta,Sydney,-33.8148,151.0017,2024-03-01,2025-12-31,120000000,Commercial Retail,James O'Brien
+PRJ-003,Melbourne Metro Station,Melbourne Metro Rail,Footscray,Melbourne,-37.8001,144.8998,2023-11-01,2026-03-31,280000000,Infrastructure,Priya Sharma
+PRJ-004,Green Square Park Precinct,City of Sydney,Zetland,Sydney,-33.9108,151.2051,2024-05-01,2025-09-30,18000000,Public Infrastructure,Tom Nguyen
+PRJ-005,Brisbane River Walk,BCC,South Brisbane,Brisbane,-27.4766,153.0158,2024-02-15,2025-08-31,32000000,Public Infrastructure,Lisa Park
+PRJ-006,Perth Arena Extension,VenuesWest,Perth CBD,Perth,-31.9514,115.8617,2024-06-01,2026-01-31,95000000,Commercial Entertainment,Mark Wilson
+PRJ-007,North Sydney Office Tower,Brookfield,North Sydney,Sydney,-33.8390,151.2070,2024-04-01,2026-06-30,220000000,Commercial Office,Emma Davis
+PRJ-008,Gold Coast Light Rail Stage 3,GCRT,Southport,Brisbane,-27.9836,153.3956,2024-01-01,2026-09-30,310000000,Infrastructure,Raj Patel
+PRJ-009,Docklands Mixed Use,Development Victoria,Docklands,Melbourne,-37.8197,144.9474,2024-07-01,2026-12-31,175000000,Mixed Use,Anna Kowalski
+PRJ-010,Fremantle Heritage Restore,City of Fremantle,Fremantle,Perth,-32.0569,115.7439,2024-08-01,2025-11-30,8500000,Heritage Restoration,Chris Thompson

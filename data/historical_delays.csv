@@ -1,0 +1,46 @@
+history_id,task_type,city,avg_delay_days,delay_frequency_pct,common_causes,season,sample_size,p90_delay_days
+H001,excavation,Sydney,8,42,groundwater;rock;utility clashes,summer,156,22
+H002,excavation,Sydney,5,38,groundwater;utility clashes,winter,143,18
+H003,excavation,Melbourne,12,51,rock;groundwater;heritage finds,summer,98,28
+H004,excavation,Melbourne,9,47,groundwater;utility clashes,winter,112,24
+H005,excavation,Brisbane,6,35,groundwater;soft soil,summer,87,16
+H006,excavation,Perth,4,28,sand conditions,summer,74,12
+H007,piling,Sydney,5,33,rock head variation;equipment breakdown,all,203,14
+H008,piling,Melbourne,7,39,rock head variation;heritage,all,178,19
+H009,piling,Brisbane,3,25,soft soil;equipment,all,124,9
+H010,piling,Perth,4,30,sand conditions;equipment,all,89,11
+H011,concrete,Sydney,3,28,wet weather;supply;labour,summer,312,8
+H012,concrete,Sydney,6,45,wet weather;supply,winter,289,16
+H013,concrete,Melbourne,8,52,wet weather;temperature extremes,winter,245,21
+H014,concrete,Brisbane,4,31,wet weather;heat,summer,198,11
+H015,concrete,Perth,2,19,supply,all,167,6
+H016,structural_steel,Sydney,7,38,fabrication delays;crane availability;wind,all,187,19
+H017,structural_steel,Melbourne,9,44,fabrication delays;wind;cold,winter,156,24
+H018,structural_steel,Brisbane,5,31,fabrication delays;rain,summer,132,14
+H019,structural_steel,Perth,6,35,fabrication delays;heat;wind,summer,98,17
+H020,tunnelling,Sydney,18,67,rock conditions;TBM breakdown;groundwater,all,45,48
+H021,tunnelling,Melbourne,22,72,basalt;groundwater;confined space,all,38,56
+H022,tunnelling,Brisbane,14,58,soft ground;groundwater,all,29,38
+H023,mep,Sydney,4,35,coordination;supply chain;rework,all,423,11
+H024,mep,Melbourne,5,40,coordination;supply chain,all,387,14
+H025,mep,Brisbane,3,28,coordination,all,298,9
+H026,mep,Perth,4,33,supply chain;coordination,all,212,12
+H027,facade,Sydney,6,41,weather;supply;access,all,145,17
+H028,facade,Melbourne,9,55,cold;wet;supply,winter,128,24
+H029,facade,Brisbane,4,30,wet;supply,summer,98,11
+H030,facade,Perth,5,36,heat;supply,summer,76,14
+H031,fitout,Sydney,4,30,coordination;supply;rework,all,534,11
+H032,fitout,Melbourne,5,35,coordination;supply,all,478,14
+H033,fitout,Brisbane,3,24,coordination,all,356,9
+H034,fitout,Perth,4,29,supply;coordination,all,267,12
+H035,demolition,Sydney,2,22,asbestos;structural surprises,all,234,6
+H036,demolition,Melbourne,3,27,asbestos;heritage,all,198,8
+H037,demolition,Brisbane,2,18,structural surprises,all,167,5
+H038,demolition,Perth,2,20,structural surprises,all,134,6
+H039,survey,Sydney,1,15,access;heritage finds,all,312,3
+H040,landscaping,Sydney,3,28,weather;supply,all,189,8
+H041,roofing,Sydney,5,38,weather;supply,all,156,14
+H042,civil,Sydney,4,32,utility clashes;weather,all,287,11
+H043,civil,Brisbane,5,37,utility clashes;wet weather,summer,234,14
+H044,civil,Melbourne,6,43,utility clashes;weather;heritage,all,198,17
+H045,commissioning,Sydney,2,20,documentation;defects,all,267,6

@@ -1,0 +1,36 @@
+compliance_id,project_id,regulation_code,regulation_name,category,status,last_checked,due_date,responsible_party,notes
+C001,PRJ-001,NCC-2022-B1,Structural Provisions,structural,compliant,2024-05-01,2024-12-31,Structural Engineer,All structural designs certified
+C002,PRJ-001,NCC-2022-C1,Fire Safety - Residential,fire_safety,compliant,2024-04-15,2025-06-30,Fire Engineer,BCA Section C compliance confirmed
+C003,PRJ-001,NCC-2022-D3,Access and Egress,accessibility,in_review,2024-05-10,2024-08-31,Access Consultant,Lift provisions being reviewed for NCC 2022 changes
+C004,PRJ-001,WHS-NSW-2011,Work Health and Safety,whs,compliant,2024-06-01,2024-12-31,HSE Manager,SWMS up to date
+C005,PRJ-001,EPA-NSW-ENVIRO,Environmental Management,environmental,compliant,2024-05-20,2025-06-30,Environmental Consultant,Asbestos management plan in place
+C006,PRJ-002,NCC-2022-B1,Structural Provisions,structural,compliant,2024-04-01,2025-12-31,Structural Engineer,
+C007,PRJ-002,NCC-2022-C2,Fire Safety - Commercial,fire_safety,compliant,2024-04-01,2025-12-31,Fire Engineer,
+C008,PRJ-002,BCA-DA-2024,Development Approval Conditions,planning,non_compliant,2024-05-30,2024-07-31,Town Planner,Noise management plan not submitted - overdue
+C009,PRJ-002,WHS-NSW-2011,Work Health and Safety,whs,compliant,2024-06-01,2024-12-31,HSE Manager,
+C010,PRJ-003,NCC-2022-B1,Structural Provisions,structural,compliant,2024-08-01,2026-03-31,Structural Engineer,
+C011,PRJ-003,VIC-METRO-TUNNELLING,Victoria Metro Tunnelling Standard,infrastructure,in_review,2024-09-01,2024-12-31,Tunnel Engineer,Segment design review outstanding
+C012,PRJ-003,WHS-VIC-2005,Occupational Health & Safety (Vic),whs,compliant,2024-09-01,2024-12-31,HSE Manager,Confined space procedures certified
+C013,PRJ-003,EPA-VIC-GROUNDWATER,Groundwater Management,environmental,compliant,2024-08-15,2025-06-30,Environmental Consultant,
+C014,PRJ-004,NCC-2022-D1,Access to Premises,accessibility,compliant,2024-07-01,2025-09-30,Access Consultant,
+C015,PRJ-004,WHS-NSW-2011,Work Health and Safety,whs,compliant,2024-07-01,2024-12-31,HSE Manager,
+C016,PRJ-004,SYDNEY-DCP-2012,Sydney Development Control Plan,planning,compliant,2024-06-15,2025-09-30,Town Planner,
+C017,PRJ-005,NCC-2022-B1,Structural Provisions,structural,compliant,2024-03-16,2025-08-31,Structural Engineer,
+C018,PRJ-005,QLD-RIVER-PERMITS,Queensland River Works Permit,environmental,compliant,2024-02-20,2025-08-31,Environmental Consultant,Marine impact assessment approved
+C019,PRJ-005,WHS-QLD-2011,Work Health & Safety (Qld),whs,compliant,2024-03-20,2024-12-31,HSE Manager,
+C020,PRJ-006,NCC-2022-B1,Structural Provisions,structural,in_review,2024-09-25,2024-11-30,Structural Engineer,Revised structural scheme pending approval
+C021,PRJ-006,NCC-2022-C2,Fire Safety - Commercial,fire_safety,compliant,2024-09-01,2026-01-31,Fire Engineer,
+C022,PRJ-006,WHS-WA-1984,Occupational Safety & Health (WA),whs,compliant,2024-09-01,2024-12-31,HSE Manager,
+C023,PRJ-007,NCC-2022-B1,Structural Provisions,structural,compliant,2024-06-01,2026-06-30,Structural Engineer,
+C024,PRJ-007,NCC-2022-C2,Fire Safety - Commercial,fire_safety,compliant,2024-06-01,2026-06-30,Fire Engineer,
+C025,PRJ-007,NSW-SEPP-65,Residential Flat Design Code,planning,compliant,2024-05-01,2026-06-30,Town Planner,
+C026,PRJ-007,WHS-NSW-2011,Work Health and Safety,whs,non_compliant,2024-06-20,2024-07-31,HSE Manager,Crane inspection overdue by 3 weeks
+C027,PRJ-008,QLD-TRANSPORT-ACT,Queensland Transport Infrastructure Act,infrastructure,compliant,2024-02-01,2026-09-30,Transport Engineer,
+C028,PRJ-008,NCC-2022-B1,Structural Provisions,structural,compliant,2024-04-01,2026-09-30,Structural Engineer,
+C029,PRJ-008,WHS-QLD-2011,Work Health & Safety (Qld),whs,in_review,2024-08-01,2024-10-31,HSE Manager,Traffic management plan under review for stage 2
+C030,PRJ-009,NCC-2022-B1,Structural Provisions,structural,compliant,2024-09-01,2026-12-31,Structural Engineer,
+C031,PRJ-009,VIC-PLANNING-ACT,Planning & Environment Act Vic,planning,compliant,2024-08-01,2026-12-31,Town Planner,
+C032,PRJ-009,WHS-VIC-2005,Occupational Health & Safety (Vic),whs,compliant,2024-09-01,2024-12-31,HSE Manager,
+C033,PRJ-010,FREMANTLE-HERITAGE,Fremantle Heritage Area Provisions,heritage,in_review,2024-09-15,2024-11-30,Heritage Consultant,Additional conservation works may require permit variation
+C034,PRJ-010,NCC-2022-B1,Structural Provisions,structural,non_compliant,2024-09-12,2024-10-31,Structural Engineer,Rot in trusses requires revised structural certificate
+C035,PRJ-010,WHS-WA-1984,Occupational Safety & Health (WA),whs,compliant,2024-09-01,2024-12-31,HSE Manager,

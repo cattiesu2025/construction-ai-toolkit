@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "construction": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/Users/YOUR_USERNAME/path/to/construction-ai-toolkit",
+        "run",
+        "--package",
+        "construction-mcp-server",
+        "construction-mcp"
+      ]
+    }
+  }
+}

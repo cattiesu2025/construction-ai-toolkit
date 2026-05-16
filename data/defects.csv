@@ -1,0 +1,18 @@
+defect_id,project_id,task_id,defect_type,severity,description,reported_date,resolved_date,status,reported_by,cost_to_fix_aud
+D001,PRJ-001,T001,structural,high,Undisclosed asbestos in basement slab requiring full remediation,2024-01-25,,open,Site Inspector Chen,185000
+D002,PRJ-001,T002,structural,medium,Groundwater ingress into excavation requiring additional dewatering,2024-03-15,2024-04-10,resolved,Engineer Smith,42000
+D003,PRJ-001,T003,structural,low,Minor misalignment in pile cap formwork - within tolerance,2024-05-20,2024-05-22,resolved,Site Inspector Chen,3500
+D004,PRJ-002,T010,structural,medium,Crack in existing slab discovered during reinforcement works,2024-05-15,2024-06-02,resolved,Structural Engineer,28000
+D005,PRJ-002,T010,electrical,low,Incorrect cable routing in Level 1 retail space,2024-06-01,,open,MEP Inspector,5500
+D006,PRJ-003,T014,structural,critical,Unexpected rock band requiring TBM re-routing - major scope change,2024-01-10,,open,Geotech Engineer,2400000
+D007,PRJ-003,T015,structural,high,Segment ring deformation in tunnel section 3,2024-09-05,,open,Tunnel Inspector,320000
+D008,PRJ-004,T020,plumbing,medium,Stormwater pipe gradient insufficient - requires re-lay,2024-07-02,,open,Hydraulics Engineer,38000
+D009,PRJ-004,T020,structural,low,Concrete kerbing misaligned on eastern boundary,2024-07-15,2024-07-18,resolved,Site Inspector,4200
+D010,PRJ-005,T027,structural,low,Minor pile eccentricity on 3 piles - within acceptance criteria,2024-04-20,2024-04-25,resolved,Structural Engineer,8500
+D011,PRJ-006,T031,finish,low,Incomplete documentation from design team causing RFI backlog,2024-09-22,,open,PM Wilson,0
+D012,PRJ-006,T032,structural,medium,Existing structure does not match as-built drawings,2024-09-25,,open,Structural Engineer,65000
+D013,PRJ-007,T036,structural,low,Piling tolerance exceeded on 2 of 180 piles - accepted by engineer,2024-06-15,2024-06-20,resolved,Geotech Engineer,12000
+D014,PRJ-008,T042,civil,high,Underground service clash - water main not shown on survey,2024-06-01,,open,Civil Engineer,290000
+D015,PRJ-008,T042,civil,medium,Unsuitable fill material discovered requiring replacement,2024-07-10,,open,Geotech Engineer,95000
+D016,PRJ-010,T052,structural,high,Timber roof trusses found to have concealed rot beyond assessment scope,2024-09-10,,open,Heritage Engineer,145000
+D017,PRJ-010,T052,finish,medium,Sandstone facade has greater spalling than initial assessment indicated,2024-09-20,,open,Heritage Conservator,78000
