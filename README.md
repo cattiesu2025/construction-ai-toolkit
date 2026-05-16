@@ -1,15 +1,16 @@
 # Construction AI Toolkit
 
-> **PulseBuild AI Platform** — Two-surface LLM agent system for construction project risk management.
+> **PulseBuild AI Platform** — Three-surface LLM agent system for construction project risk management.
 
-Built to demonstrate production-grade Agent and MCP Server engineering:
+Built to demonstrate production-grade Agent, MCP Server, and Slack Bot engineering:
 
 | Project | What it proves | How to run |
 |---------|---------------|------------|
 | **A: Delay Detection Agent** | Proactive Agent, Tool Use, Eval, observability | `uv run run-delay-agent` |
 | **B: Construction MCP Server** | Protocol-layer abstraction, Tool/Resource/Prompt primitives | `uv run construction-mcp` |
+| **C: Slack Bot** | Interactive Claude API tool use, role-based access control | `uv run run-slack-bot` |
 
-Both surfaces share a single `core-tools` business-logic package — written once, consumed twice.
+All three surfaces share a single `core-tools` business-logic package — written once, consumed three times.
 
 ---
 
@@ -20,10 +21,11 @@ construction-ai-toolkit/
 ├── packages/
 │   ├── core-tools/          # Shared business logic (schedule, weather, history, compliance, defects)
 │   ├── delay-agent/         # Project A — proactive daily scheduled agent
-│   └── mcp-server/          # Project B — MCP server for Claude Desktop / Cursor
+│   ├── mcp-server/          # Project B — MCP server for Claude Desktop / Cursor
+│   └── slack-bot/           # Project C — interactive Slack bot with role-based access
 ├── data/                    # Mock data: 10 projects, 55 tasks, 17 defects, 35 compliance records
 ├── evals/                   # 20-case eval suite with LLM-as-judge
-└── tests/                   # 54 unit tests (100% pass)
+└── tests/                   # 76 unit tests (100% pass)
 ```
 
 ### Project A — Delay Detection Agent
@@ -53,8 +55,39 @@ Claude Desktop / Cursor / Claude Code
   ├── Resources (3): project://{id}, schedule://{id}, compliance://{id}
   └── Prompts (2):   daily_report_template, risk_assessment_template
         ↓
-  core-tools package (shared with Project A)
+  core-tools package (shared with Projects A & C)
 ```
+
+### Project C — Slack Bot
+
+```
+User @mentions bot in Slack
+        ↓ Socket Mode (no public URL needed)
+  slack-bolt App
+        ↓
+  Role check (roles.json: admin / pm / worker)
+        ↓
+  Claude API (claude-opus-4-7) + role-filtered tool definitions
+        ↓ Tool Use loop
+  ┌─────────────────────────────────────────────┐
+  │ get_schedule_data    → schedule + crew filter│
+  │ analyze_progress_gap → task deviation        │
+  │ get_all_defects      → defect summary        │  ← pm / admin only
+  │ find_defects_by_type → filtered defects      │  ← pm / admin only
+  │ check_compliance     → compliance status     │  ← pm / admin only
+  │ lookup_regulation    → regulation search     │  ← pm / admin only
+  └─────────────────────────────────────────────┘
+        ↓
+  Natural language reply → Slack channel
+```
+
+**Role permissions:**
+
+| Tool | admin | pm | worker |
+|------|-------|----|--------|
+| Schedule & progress | ✅ | ✅ | ✅ (own crew only) |
+| Defects | ✅ | ✅ | — |
+| Compliance | ✅ | ✅ | — |
 
 ---
 
@@ -71,7 +104,8 @@ Claude Desktop / Cursor / Claude Code
 git clone <repo-url> && cd construction-ai-toolkit
 uv sync --all-packages
 cp .env.example .env
-# Edit .env — fill in ANTHROPIC_API_KEY and SLACK_WEBHOOK_URL
+# Edit .env — fill in ANTHROPIC_API_KEY, SLACK_WEBHOOK_URL,
+#             SLACK_BOT_TOKEN, SLACK_APP_TOKEN
 ```
 
 ### Run Project A — Delay Agent (one-shot)
@@ -105,11 +139,24 @@ uv run construction-mcp
 npx @modelcontextprotocol/inspector uv run construction-mcp
 ```
 
+### Run Project C — Slack Bot
+
+```bash
+# Start bot (Socket Mode — no public URL needed)
+uv run run-slack-bot
+
+# In Slack, @mention the bot in any channel it's added to:
+# @Construction Alert Bot PRJ-001 今天有什么风险?
+# @Construction Alert Bot PRJ-003 check compliance status
+```
+
+**Setup:** Go to [api.slack.com/apps](https://api.slack.com/apps) → your app → add scopes `app_mentions:read` + `chat:write`, enable Socket Mode, subscribe to `app_mention` event. Add your Slack user ID to `packages/slack-bot/roles.json`.
+
 ### Run Tests
 
 ```bash
 uv run pytest tests/ -v
-# 54 passed in ~3s
+# 76 passed in ~3s
 ```
 
 ---
@@ -208,4 +255,14 @@ packages/mcp-server/src/construction_mcp/
 ├── tools.py           # MCP tool wrappers
 ├── resources.py       # project://, schedule://, compliance:// handlers
 └── prompts.py         # daily_report, risk_assessment templates
+
+packages/slack-bot/src/slack_bot/
+├── bot.py             # Slack App entry point (Socket Mode)
+├── handler.py         # Claude API agentic loop
+├── dispatcher.py      # Tool execution + crew-level filter
+├── tool_defs.py       # Anthropic tool schemas + role filter
+├── roles.py           # Slack user ID → role/crew/allowed tools
+└── config.py          # .env loader
+packages/slack-bot/
+└── roles.json         # User ID → role mapping (edit before running)
 ```
