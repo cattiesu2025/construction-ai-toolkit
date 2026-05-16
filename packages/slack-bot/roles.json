@@ -1,0 +1,5 @@
+{
+  "UADMIN001": { "role": "admin",  "name": "Admin User" },
+  "UPM000001": { "role": "pm",     "name": "Alice PM" },
+  "UWORKER01": { "role": "worker", "name": "Bob Worker", "crew": "Crew-A" }
+}
