@@ -1,0 +1,162 @@
+[
+  {
+    "id": "E001",
+    "project_id": "PRJ-001",
+    "description": "Critical-path piling task stalled for 967 days with cascading downstream freeze",
+    "expected_severity": "CRITICAL",
+    "should_alert": true,
+    "key_signals": ["T003", "piling", "967 days", "critical path"]
+  },
+  {
+    "id": "E002",
+    "project_id": "PRJ-003",
+    "description": "Melbourne metro tunnelling behind by 45 days plus 2 structural defects open",
+    "expected_severity": "CRITICAL",
+    "should_alert": true,
+    "key_signals": ["T015", "tunnelling", "TBM", "underground"]
+  },
+  {
+    "id": "E003",
+    "project_id": "PRJ-008",
+    "description": "Gold Coast light rail utility relocation 3 weeks behind with underground service clash defect",
+    "expected_severity": "HIGH",
+    "should_alert": true,
+    "key_signals": ["T042", "utility", "clash", "behind"]
+  },
+  {
+    "id": "E004",
+    "project_id": "PRJ-002",
+    "description": "Parramatta retail structural reinforcement at 85% (slightly behind) but non-compliant DA noise plan",
+    "expected_severity": "HIGH",
+    "should_alert": true,
+    "key_signals": ["compliance", "non_compliant", "DA", "noise"]
+  },
+  {
+    "id": "E005",
+    "project_id": "PRJ-006",
+    "description": "Perth arena design overran 20 days causing late demolition start at only 40%",
+    "expected_severity": "HIGH",
+    "should_alert": true,
+    "key_signals": ["T032", "demolition", "design overrun", "40%"]
+  },
+  {
+    "id": "E006",
+    "project_id": "PRJ-010",
+    "description": "Heritage restoration structural stabilisation at 30% with concealed timber rot defect",
+    "expected_severity": "HIGH",
+    "should_alert": true,
+    "key_signals": ["T052", "heritage", "rot", "30%"]
+  },
+  {
+    "id": "E007",
+    "project_id": "PRJ-007",
+    "description": "North Sydney tower piling at 92% (ahead of schedule) but WHS crane inspection overdue",
+    "expected_severity": "MEDIUM",
+    "should_alert": true,
+    "key_signals": ["crane", "WHS", "non_compliant", "inspection"]
+  },
+  {
+    "id": "E008",
+    "project_id": "PRJ-004",
+    "description": "Sydney park civil works at 60% with stormwater pipe gradient defect requiring re-lay",
+    "expected_severity": "MEDIUM",
+    "should_alert": true,
+    "key_signals": ["stormwater", "defect", "re-lay", "open"]
+  },
+  {
+    "id": "E009",
+    "project_id": "PRJ-009",
+    "description": "Docklands site remediation at 65%, on track but Melbourne tunnelling in portfolio adds risk context",
+    "expected_severity": "MEDIUM",
+    "should_alert": false,
+    "key_signals": ["on track", "65%", "remediation"]
+  },
+  {
+    "id": "E010",
+    "project_id": "PRJ-005",
+    "description": "Brisbane River Walk piling at 78%, slightly behind but within historical tolerance",
+    "expected_severity": "LOW",
+    "should_alert": false,
+    "key_signals": ["78%", "piling", "Brisbane", "on track"]
+  },
+  {
+    "id": "E011",
+    "project_id": "PRJ-004",
+    "description": "Survey completed 3 days early — no risk signal",
+    "expected_severity": "LOW",
+    "should_alert": false,
+    "key_signals": ["completed early", "survey", "T019"]
+  },
+  {
+    "id": "E012",
+    "project_id": "PRJ-007",
+    "description": "Tower piling at 92% ahead of schedule — primary task healthy despite WHS note",
+    "expected_severity": "LOW",
+    "should_alert": false,
+    "key_signals": ["ahead", "92%", "piling"]
+  },
+  {
+    "id": "E013",
+    "project_id": "PRJ-005",
+    "description": "River walk structural steel not yet started (planned future task) — no delay yet",
+    "expected_severity": "LOW",
+    "should_alert": false,
+    "key_signals": ["not started", "future", "T028"]
+  },
+  {
+    "id": "E014",
+    "project_id": "PRJ-009",
+    "description": "Docklands residential tower foundation not started yet — within planned timeline",
+    "expected_severity": "LOW",
+    "should_alert": false,
+    "key_signals": ["not started", "future", "T047"]
+  },
+  {
+    "id": "E015",
+    "project_id": "PRJ-002",
+    "description": "Parramatta retail demolition completed 2 days late — minor overrun, non-critical",
+    "expected_severity": "LOW",
+    "should_alert": false,
+    "key_signals": ["T009", "2 days", "non-critical", "completed"]
+  },
+  {
+    "id": "E016",
+    "project_id": "PRJ-001",
+    "description": "Agent should not cry wolf on low-probability upstream factors when CRITICAL already identified",
+    "expected_severity": "CRITICAL",
+    "should_alert": true,
+    "key_signals": ["CRITICAL", "concrete piling", "Slack", "specific actions"]
+  },
+  {
+    "id": "E017",
+    "project_id": "PRJ-003",
+    "description": "Melbourne metro rock TBM defect is CRITICAL — agent must cite specific costs and actions",
+    "expected_severity": "CRITICAL",
+    "should_alert": true,
+    "key_signals": ["TBM", "$2,400,000", "CRITICAL", "segment ring"]
+  },
+  {
+    "id": "E018",
+    "project_id": "PRJ-006",
+    "description": "Perth arena design delay causing cascade — agent must trace root cause not just symptoms",
+    "expected_severity": "HIGH",
+    "should_alert": true,
+    "key_signals": ["design overrun", "cascade", "root cause", "T031"]
+  },
+  {
+    "id": "E019",
+    "project_id": "PRJ-010",
+    "description": "Heritage project has structural non-compliance + open defects — compliance risk must be flagged",
+    "expected_severity": "HIGH",
+    "should_alert": true,
+    "key_signals": ["non_compliant", "NCC", "structural", "certificate"]
+  },
+  {
+    "id": "E020",
+    "project_id": "PRJ-004",
+    "description": "Survey completed early, civil works on track at 60% — agent must distinguish between complete and in-progress tasks",
+    "expected_severity": "MEDIUM",
+    "should_alert": false,
+    "key_signals": ["60%", "stormwater", "defect", "open"]
+  }
+]
