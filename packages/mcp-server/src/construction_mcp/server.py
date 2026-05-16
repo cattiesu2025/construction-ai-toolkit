@@ -97,9 +97,11 @@ def risk_assessment_template(project_id: str) -> str:
 
 
 def main() -> None:
-    port = int(os.getenv("PORT", 8000))
-    mcp.settings.port = port
-    mcp.run(transport="streamable-http")
+    if port_env := os.getenv("PORT"):
+        mcp.settings.port = int(port_env)
+        mcp.run(transport="streamable-http")
+    else:
+        mcp.run(transport="stdio")
 
 
 if __name__ == "__main__":

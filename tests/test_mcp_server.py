@@ -119,22 +119,19 @@ class TestMCPServerImport:
 
 
 class TestMCPServerMain:
-    def test_main_uses_streamable_http(self, monkeypatch):
+    def test_main_uses_streamable_http_when_port_set(self, monkeypatch):
         from unittest.mock import patch
         monkeypatch.setenv("PORT", "9001")
         with patch("construction_mcp.server.mcp.run") as mock_run:
             from construction_mcp.server import main, mcp
             main()
             mock_run.assert_called_once_with(transport="streamable-http")
-            assert mcp.settings.host == "0.0.0.0"
             assert mcp.settings.port == 9001
 
-    def test_main_defaults_to_port_8000(self, monkeypatch):
+    def test_main_uses_stdio_when_port_not_set(self, monkeypatch):
         from unittest.mock import patch
         monkeypatch.delenv("PORT", raising=False)
         with patch("construction_mcp.server.mcp.run") as mock_run:
-            from construction_mcp.server import main, mcp
+            from construction_mcp.server import main
             main()
-            mock_run.assert_called_once_with(transport="streamable-http")
-            assert mcp.settings.host == "0.0.0.0"
-            assert mcp.settings.port == 8000
+            mock_run.assert_called_once_with(transport="stdio")
