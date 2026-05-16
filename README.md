@@ -187,19 +187,29 @@ Projects B and C run on Railway as two services in one project.
    - Networking: enable public networking, note the generated URL
 4. Both services share the same git repo root as build context — `core-tools` and `data/` are copied into each image.
 
-### Connect Claude Desktop to Railway MCP Server
+### Connect Claude.ai Web to Railway MCP Server
 
-Once deployed, connect via the Railway URL instead of a local command:
+The primary production use case — no installation required for end users:
 
-```json
-{
-  "mcpServers": {
-    "construction": {
-      "url": "https://<your-mcp-server>.railway.app/mcp"
-    }
-  }
-}
+1. Open [claude.ai](https://claude.ai) → avatar → **Settings** → **Integrations**
+2. Add MCP Server:
+   - Name: `construction`
+   - URL: `https://<your-mcp-server>.railway.app/mcp`
+3. In any new chat, click `+` → **Connectors** → enable `construction`
+
+**PM report workflow:**
+
 ```
+帮我生成 PRJ-001 的本周进度报告，包括延误风险和合规状态
+```
+```
+对比 PRJ-001、PRJ-003、PRJ-005 的进度，找出最需要关注的项目
+```
+```
+PRJ-007 有哪些合规问题？列出需要在下周例会上讨论的行动项
+```
+
+Claude automatically calls `get_schedule_data`, `check_compliance`, and other tools, then synthesises a structured report — no manual data export needed.
 
 ---
 
