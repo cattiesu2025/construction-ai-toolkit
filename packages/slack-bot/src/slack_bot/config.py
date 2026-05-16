@@ -11,9 +11,9 @@ for _pkg in ["core-tools", "slack-bot"]:
 
 load_dotenv(_root / ".env")
 
-ANTHROPIC_API_KEY: str = os.environ["ANTHROPIC_API_KEY"]
-SLACK_BOT_TOKEN: str = os.environ["SLACK_BOT_TOKEN"]
-SLACK_APP_TOKEN: str = os.environ["SLACK_APP_TOKEN"]
+ANTHROPIC_API_KEY: str | None = os.getenv("ANTHROPIC_API_KEY")
+SLACK_BOT_TOKEN: str | None = os.getenv("SLACK_BOT_TOKEN")
+SLACK_APP_TOKEN: str | None = os.getenv("SLACK_APP_TOKEN")
 BOT_MODEL: str = os.getenv("BOT_MODEL", "claude-opus-4-7")
 
 ROLES_FILE: Path = _root / "packages" / "slack-bot" / "roles.json"
