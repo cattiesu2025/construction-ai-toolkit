@@ -13,7 +13,11 @@ app = App(token=config.SLACK_BOT_TOKEN)
 def on_mention(event, say):
     user_id = event.get("user", "")
     text = event.get("text", "")
-    reply = handle_mention(user_id=user_id, text=text)
+    try:
+        reply = handle_mention(user_id=user_id, text=text)
+    except Exception as exc:
+        logging.exception("handle_mention failed")
+        reply = f"Error: {exc}"
     say(reply)
 
 
