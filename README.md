@@ -4,11 +4,11 @@
 
 Built to demonstrate production-grade Agent, MCP Server, and Slack Bot engineering:
 
-| Project | What it proves | How to run |
-|---------|---------------|------------|
-| **A: Delay Detection Agent** | Proactive Agent, Tool Use, Eval, observability | `uv run run-delay-agent` |
-| **B: Construction MCP Server** | Protocol-layer abstraction, Tool/Resource/Prompt primitives | `uv run construction-mcp` |
-| **C: Slack Bot** | Interactive Claude API tool use, role-based access control | `uv run run-slack-bot` |
+| Project | What it proves | Local | Cloud |
+|---------|---------------|-------|-------|
+| **A: Delay Detection Agent** | Proactive Agent, Tool Use, Eval, observability | `uv run run-delay-agent` | — |
+| **B: Construction MCP Server** | Protocol-layer abstraction, Tool/Resource/Prompt primitives | `uv run construction-mcp` | Railway (HTTP) |
+| **C: Slack Bot** | Interactive Claude API tool use, role-based access control | `uv run run-slack-bot` | Railway (Worker) |
 
 All three surfaces share a single `core-tools` business-logic package — written once, consumed three times.
 
@@ -48,7 +48,7 @@ APScheduler (daily 7:00 AM)
 
 ```
 Claude Desktop / Cursor / Claude Code
-        ↓ MCP Protocol (stdio)
+        ↓ stdio (local)  OR  streamable-http (Railway)
   Construction MCP Server
   ├── Tools (5):     find_defects_by_type, check_compliance, lookup_regulation,
   │                  get_schedule_data, analyze_progress_gap
@@ -57,6 +57,8 @@ Claude Desktop / Cursor / Claude Code
         ↓
   core-tools package (shared with Projects A & C)
 ```
+
+Transport is selected automatically: stdio when run locally, `streamable-http` when `PORT` env var is set (Railway injects this).
 
 ### Project C — Slack Bot
 
@@ -161,7 +163,47 @@ uv run pytest tests/ -v
 
 ---
 
-## Claude Desktop Integration
+## Deploy to Railway
+
+Projects B and C run on Railway as two services in one project.
+
+### Services
+
+| Service | Type | Dockerfile |
+|---------|------|-----------|
+| `slack-bot` | Worker (no public port) | `packages/slack-bot/Dockerfile` |
+| `mcp-server` | Web Service (HTTP) | `packages/mcp-server/Dockerfile` |
+
+### Steps
+
+1. **New Project** → Deploy from GitHub repo
+2. **Service 1 — slack-bot**
+   - Dockerfile Path: `packages/slack-bot/Dockerfile`
+   - Variables: `ANTHROPIC_API_KEY`, `SLACK_BOT_TOKEN`, `SLACK_APP_TOKEN`
+   - Networking: disable public port (worker process)
+3. **Service 2 — mcp-server**
+   - Dockerfile Path: `packages/mcp-server/Dockerfile`
+   - Variables: `ANTHROPIC_API_KEY`
+   - Networking: enable public networking, note the generated URL
+4. Both services share the same git repo root as build context — `core-tools` and `data/` are copied into each image.
+
+### Connect Claude Desktop to Railway MCP Server
+
+Once deployed, connect via the Railway URL instead of a local command:
+
+```json
+{
+  "mcpServers": {
+    "construction": {
+      "url": "https://<your-mcp-server>.railway.app/mcp"
+    }
+  }
+}
+```
+
+---
+
+## Claude Desktop Integration (Local)
 
 Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 
